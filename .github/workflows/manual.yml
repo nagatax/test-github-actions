@@ -6,6 +6,6 @@ jobs:
     run:
         runs-on: ubuntu-latest
         env:
-            BRANCH: main
+            ACTOR: ${{ github.actor }}
         steps:
-            - run: echo "${{ env.BRANCH }}"
+            - run: echo "${ACTOR}"
