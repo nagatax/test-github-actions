@@ -8,4 +8,4 @@ jobs:
         env:
             BRANCH: main
         steps:
-            - run: echo "${BRANCH}"
+            - run: echo "${{ env.BRANCH }}"
