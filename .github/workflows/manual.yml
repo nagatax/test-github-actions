@@ -6,6 +6,6 @@ jobs:
     run:
         runs-on: ubuntu-latest
         env:
-            ACTOR: ${{ github.actor }}
+            USERNAME: ${{ vars.USERNAME_TEST }}
         steps:
-            - run: echo "${ACTOR}"
+            - run: echo "${USERNAME_TEST}"
