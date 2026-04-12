@@ -5,10 +5,7 @@ on:
 jobs:
     run:
         runs-on: ubuntu-latest
+        env:
+            BRANCH: main
         steps:
-            - run: echo "${{ runner.name  }}"
-            - run: echo "${{ runner.os  }}"
-            - run: echo "${{ runner.arch  }}"
-            - run: echo "${{ runner.temp  }}"
-            - run: echo "${{ runner.tool_cache  }}"
-            - run: echo "${{ runner.debug  }}"
+            - run: echo "${BRANCH}"
