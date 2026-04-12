@@ -5,7 +5,8 @@ on:
 jobs:
     run:
         runs-on: ubuntu-latest
-        env:
-            GITHUB_STR: ${{ toJson(github) }}
         steps:
-            - run: echo "${GITHUB_STR}"
+            - uses: actions/checkout@v6
+            - run: echo "${HASH}"
+              env:
+                HASH: ${{ hashFiles('.github/workflows/*.yml') }}
