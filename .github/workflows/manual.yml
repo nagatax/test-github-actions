@@ -4,9 +4,7 @@ on:
 
 jobs:
     run:
-        if: ${{ github.actor == 'octocat' }}
+        name: Super Useful Job
         runs-on: ubuntu-latest
         steps:
-            - run: exit 1
-            - run: echo "Hello"
-              if: ${{ failure() }}
+            - run: exit 0
