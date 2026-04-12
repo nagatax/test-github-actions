@@ -6,6 +6,6 @@ jobs:
     run:
         runs-on: ubuntu-latest
         env:
-            PASSWORD: ${{ secrets.PASSWORD }}
+            GITHUB_STR: ${{ toJson(github) }}
         steps:
-            - run: echo "${PASSWORD}"
+            - run: echo "${GITHUB_STR}"
