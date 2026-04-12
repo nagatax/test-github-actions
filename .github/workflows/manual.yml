@@ -8,4 +8,4 @@ jobs:
         env:
             USERNAME: ${{ vars.USERNAME_TEST }}
         steps:
-            - run: echo "${USERNAME_TEST}"
+            - run: echo "${USERNAME}"
