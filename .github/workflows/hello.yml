@@ -1,0 +1,11 @@
+name: Hello
+on: [push, pull_request]
+jobs:
+    hello:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Hello, world"
+            - run: |
+                git log -l
+                tree -a .
+            - uses: actions/checkout@v4
