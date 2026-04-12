@@ -8,4 +8,7 @@ jobs:
         name: Super Useful Job
         runs-on: ubuntu-latest
         steps:
-            - run: exit 0
+            - run: |
+                export RESULT="hello"
+                echo "${RESULT}"
+            - run: echo "${RESULT}"
