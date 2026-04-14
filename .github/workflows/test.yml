@@ -14,6 +14,5 @@ jobs:
     # comment
     test:
         runs-on: ubuntu-latest
-        timeout-minutes: 1
         steps:
-            - run: sleep 120
+            - run: echo "::debug::This is a debug log" # デバッグログ有効化時にのみ出力
