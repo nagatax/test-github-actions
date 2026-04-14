@@ -13,7 +13,7 @@ concurrency:
 jobs:
     print:
         runs-on: ubuntu-latest
-        environment: test
+        environment: prod
         env:
             USERNAME: ${{ vars.USERNAME }}
             PASSWORD: ${{ secrets.PASSWORD }}
