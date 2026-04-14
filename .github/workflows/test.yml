@@ -11,8 +11,9 @@ concurrency:
     cancel-in-progress: true
 
 jobs:
-    # comment
     test:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "::debug::This is a debug log" # デバッグログ有効化時にのみ出力
+            - run: echo "::error::This is an error"
+            - run: echo "::warning::This is a warning"
+            - run: echo "::notice::This is a notice"
