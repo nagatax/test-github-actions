@@ -11,10 +11,15 @@ concurrency:
     cancel-in-progress: true
 
 jobs:
-    test:
+    first:
         runs-on: ubuntu-latest
         steps:
-            - run: | # マークダウンテキストをジョブサマリーへ出力
-                echo "## Example Title:" >> "${GITHUB_STEP_SUMMARY}"
-                echo "- first line" >> "${GITHUB_STEP_SUMMARY}"
-                echo "- second line" >> "${GITHUB_STEP_SUMMARY}"
+            - run: sleep 10 && echo "First job"
+    second:
+        runs-on: ubuntu-latest
+        steps:
+            - run: sleep 10 && echo "Second job"
+    third:
+        runs-on: ubuntu-latest
+        steps:
+            - run: sleep 10 && echo "Third job"
