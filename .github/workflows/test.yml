@@ -12,9 +12,11 @@ concurrency:
 
 jobs:
     print:
-        strategy:
-            matrix:
-                lang: [php, go, python, node, java]
         runs-on: ubuntu-latest
+        environment: test
+        env:
+            USERNAME: ${{ vars.USERNAME }}
+            PASSWORD: ${{ secrets.PASSWORD }}
         steps:
-            - run: echo "${{ matrix.lang }}"
+            - run: echo "$USERNAME"
+            - run: echo "$PASSWORD"
